@@ -1,17 +1,15 @@
-{
-  /* <div className=" absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-  Popup
-</div> */
-}
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../Components/Loader";
 import { Island, Sky, Bird, Plane } from "../models/index.js";
+import HomeInfo from "./HomeInfo.jsx";
 
 const Home = () => {
+  const [currentStage, setCurrentStage] = useState(1);
+
   const [isRotating, setIsRotating] = useState(false);
   const adjustIslandForScreenSize = () => {
-    let screenScale;
+    let screenScale = null;
     let screenPosition = [0, -6.5, -43];
     let rotation = [0.1, 4.7, 0];
     if (window.innerWidth < 750) {
@@ -22,11 +20,29 @@ const Home = () => {
     return [screenScale, screenPosition, rotation];
   };
 
+  const adjustPlaneForScreenSize = () => {
+    let screenScale, screenPosition;
+
+    if (window.innerWidth < 768) {
+      screenScale = [1.5, 1.5, 1.5];
+      screenPosition = [0, -1.5, 0];
+    } else {
+      screenScale = [3, 3, 3];
+      screenPosition = [0, -4, -4];
+    }
+    return [screenScale, screenPosition];
+  };
+
   const [islandScale, islandPosition, islandRotation] =
     adjustIslandForScreenSize();
+
+  const [planeScale, planePosition] = adjustPlaneForScreenSize();
   return (
     <>
       <section className=" w-full h-screen relative">
+        <div className=" absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+          {currentStage && <HomeInfo currentStage={currentStage} />}
+        </div>
         <Canvas
           className={`w-full h-screen bg-transparent ${
             isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -41,7 +57,7 @@ const Home = () => {
               groundColor="#000000"
               intensity={1}
             />
-            <Sky />
+            <Sky isRotating={isRotating} />
 
             <Island
               position={islandPosition}
@@ -49,9 +65,15 @@ const Home = () => {
               rotation={islandRotation}
               isRotating={isRotating}
               setIsRotating={setIsRotating}
+              setCurrentStage={setCurrentStage}
             />
             <Bird />
-            <Plane />
+            <Plane
+              planeScale={planeScale}
+              planePosition={planePosition}
+              isRotating={isRotating}
+              rotation={[0, 20, 0]}
+            />
           </Suspense>
         </Canvas>
       </section>
