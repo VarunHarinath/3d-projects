@@ -51,7 +51,7 @@ const Lessons = () => {
       ) : (
         <div>
           {lesson.map((LessonItem) => (
-            <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3">
+            <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3 mt-5 w-full">
               <div class="md:flex">
                 <div class="p-8">
                   <div class="uppercase tracking-wide text-smtext-slate-400 hover:text-sky-400">

@@ -28,9 +28,9 @@ const Navbar = () => {
                 <li>
                   <a
                     class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href=""
+                    href="/leaderboard"
                   >
-                    Score:
+                    Score: 100
                   </a>
                 </li>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                     class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                     href=""
                   >
-                    XP:
+                    XP:80
                   </a>
                 </li>
               </ul>

@@ -36,7 +36,7 @@ const HomeInfo = ({ currentStage }) => {
           Ready to beat the heat? <br /> Take the Quiz
         </p>
 
-        <Link to="/projects" className="neo-brutalism-white neo-btn">
+        <Link to="/quizz" className="neo-brutalism-white neo-btn">
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
       </div>
@@ -50,7 +50,7 @@ const HomeInfo = ({ currentStage }) => {
           Can't understand the quiz? <br /> follow me to learn the concept
         </p>
 
-        <Link to="/contact" className="neo-brutalism-white neo-btn">
+        <Link to="/lessons" className="neo-brutalism-white neo-btn">
           <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
       </div>
