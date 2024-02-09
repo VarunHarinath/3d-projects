@@ -57,7 +57,7 @@ const Navbar = () => {
                 <div class="hidden sm:flex">
                   <a
                     class="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500"
-                    href="#"
+                    href="/Contact"
                   >
                     <span class="absolute -start-full transition-all group-hover:start-4">
                       <svg
