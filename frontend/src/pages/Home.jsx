@@ -69,8 +69,8 @@ const Home = () => {
             />
             <Bird />
             <Plane
-              planeScale={planeScale}
-              planePosition={planePosition}
+              Scale={planeScale}
+              Position={planePosition}
               isRotating={isRotating}
               rotation={[0, 20, 0]}
             />
