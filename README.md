@@ -12,11 +12,16 @@ Our project utilizes a robust technology stack to deliver a seamless and powerfu
 
 *Front-End:*
 _React.js:_ A JavaScript library for building user interfaces.
+
 _Redux:_ A predictable state container for JavaScript apps, ensuring consistent behavior across our application.
+
 _Three.js and drei:_ JavaScript libraries and abstractions that enable immersive 3D graphics within web browsers without the use of plugins.
+
 *Back-End:*
 _Mongoose:_ An elegant mongodb object modeling for node.js, enabling rapid development of database schemas.
+
 _React-Auth-Toolkit:_ A toolkit for handling authentication workflows in React applications.
+
 _MongoDB:_ A NoSQL database designed for scalability and performance.
 
 # *Team*
