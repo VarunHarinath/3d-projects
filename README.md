@@ -1,4 +1,5 @@
 **SmartEdu: Revolutionizing Education Through Technology**
+
 Welcome to SmartEdu, the winning project of the 23-hour hackathon hosted by ABC University, under the theme of Smart Education. Our project aims to leverage cutting-edge technology to enhance the educational experience, making learning more interactive, engaging, and accessible to students everywhere.
 
 **Team: Tech Wizards**
