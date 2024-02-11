@@ -27,9 +27,9 @@ _MongoDB:_ A NoSQL database designed for scalability and performance.
 # *Team*
 Our project was brought to life by a dedicated team of developers and leaders:
 
-**Sindhu Ravuri: Core Developer**
+**[Sindhu Ravuri](https://github.com/sindhuravuri666): Core Developer**
 
-**Sarthak Aitha: Backend Developer**
+**[Sarthak Aitha](https://github.com/wreckster1507): Backend Developer**
 
 **Varun Harinath: Front-End Developer**
 
