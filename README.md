@@ -48,16 +48,17 @@ To get started with SmartEdu, follow these steps:
        `git clone https://github.com/VarunHarinath/SmartEdu`
    
 3. Install NPM packages for both frontend and backend
-     `cd frontend && npm install`
-     `cd ../backend && npm install`
+          `cd SmartEdu`
+            `cd frontend && npm install`
+            `cd ../backend && npm install`
   
-4. Set up your environment variables in .env files within both the frontend and backend directories according to the provided .env.example files.
+5. Set up your environment variables in .env files within both the frontend and backend directories according to the provided .env.example files.
    
-5. Start the backend server
+6. Start the backend server
     ` cd backend`
      `nodemon index.js`
    
-6. Start the frontend application
+7. Start the frontend application
      `cd frontend`
     ` npm run dev`
 
