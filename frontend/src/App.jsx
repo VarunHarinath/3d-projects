@@ -6,7 +6,7 @@ import "./App.css";
 // import ModuleQuiz from "./components/ModuleQuiz.jsx";
 import QuizzList from "./pages/QuizzList.jsx";
 import Navbar from "./Components/Navbar";
-import Leaderboard from "./components/Leaderboard.jsx";
+// import Leaderboard from "./components/Leaderboard.jsx";
 import { Home, About, Projects, Contact } from "../src/pages/index.js";
 import DSAPage from "./pages/lessonPages/DSAPage.jsx";
 import AlgoPage from "./pages/lessonPages/AlgoPage.jsx";
