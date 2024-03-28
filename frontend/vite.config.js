@@ -7,5 +7,8 @@ export default defineConfig({
   assetsInclude: ["**/*.glb"],
   server: {
     host: "0.0.0.0",
+    hmr: {
+      overlay: false, // Disables the HMR error overlay
+    },
   },
 });
