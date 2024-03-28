@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const DSAPage = () => {
   const [data, setData] = useState([]);
@@ -18,12 +19,12 @@ const DSAPage = () => {
   return (
     <>
       <div>
-        <p className="text-lg m-5 font-semibold text-sky-400 text-center my-9">
+        <p className="text-lg m-5 font-semibold text-sky-400 text-center my-9 ">
           Basic Data Structures
         </p>
         <div>
           {data.map((item, index) => (
-            <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8 mx-20">
+            <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8 mx-20 my-8">
               <div class="flex items-start sm:gap-8">
                 <div
                   class="hidden sm:grid sm:size-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"
@@ -44,9 +45,9 @@ const DSAPage = () => {
                   </strong>
 
                   <h3 class="mt-4 text-lg font-medium sm:text-xl">
-                    <a href="#" class="hover:underline">
+                    <Link to={`/DSApage/${item._id}`} class="hover:underline">
                       {item.title}
-                    </a>
+                    </Link>
                   </h3>
 
                   <p class="mt-1 text-sm text-gray-700">{item.description}</p>

@@ -12,6 +12,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+// to get data by id
+
+router.get("/:id", async (req, res) => {
+  const id = req.params.id;
+  try {
+    const data = await LessonAlgo.findById(id);
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 router.post("/", async (req, res) => {
   const { title, points, publishYear, description, link, content } = req.body;
   try {

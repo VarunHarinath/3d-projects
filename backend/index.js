@@ -28,3 +28,12 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+// web socket server
+import { Server } from "socket.io";
+
+const io = new Server(3010);
+
+io.on("connection", (socket) => {
+  console.log(`Client connected: ${socket.id}`);
+});

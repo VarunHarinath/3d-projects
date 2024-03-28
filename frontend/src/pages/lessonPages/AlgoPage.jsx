@@ -24,7 +24,7 @@ const AlgoPage = () => {
         </p>
         <div>
           {data.map((item, index) => (
-            <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8 mx-20">
+            <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8 mx-20 my-8">
               <div class="flex items-start sm:gap-8">
                 <div
                   class="hidden sm:grid sm:size-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"
