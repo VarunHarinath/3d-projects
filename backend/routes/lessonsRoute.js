@@ -6,22 +6,25 @@ const router = express.Router();
 // Route for Saving a new Book
 router.post("/", async (request, response) => {
   try {
-    if (
-      !request.body.title ||
-      !request.body.points ||
-      !request.body.publishYear ||
-      !request.body.description
-    ) {
-      return response.status(400).send({
-        message:
-          "Send all required fields: title, points, publishYear,description",
-      });
-    }
+    // if (
+    //   !request.body.title ||
+    //   !request.body.points ||
+    //   !request.body.publishYear ||
+    //   !request.body.description ||
+    //   !request.body.content
+    // ) {
+    //   return response.status(400).send({
+    //     message:
+    //       "Send all required fields: title, points, publishYear,description",
+    //   });
+    // }
     const newBook = {
       title: request.body.title,
       points: request.body.points,
       publishYear: request.body.publishYear,
       description: request.body.description,
+      link: request.body.link,
+      content: request.body.content,
     };
 
     const lesson = await LessonDSA.create(newBook);
@@ -38,10 +41,7 @@ router.get("/", async (request, response) => {
   try {
     const lesson = await LessonDSA.find({});
 
-    return response.status(200).json({
-      count: lesson.length,
-      data: lesson,
-    });
+    return response.status(200).json(lesson);
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });

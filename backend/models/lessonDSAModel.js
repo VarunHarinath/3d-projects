@@ -20,6 +20,9 @@ const lessonSchema = mongoose.Schema(
     link: {
       type: String,
     },
+    content: {
+      type: String,
+    },
   },
   {
     timestamps: true,
