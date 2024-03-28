@@ -10,7 +10,7 @@ const IndetailPage = () => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/lessonAlgo/${id}`
+          `http://13.235.176.186:3000/lessonAlgo/${id}`
         );
         setData(Array.isArray(response.data) ? response.data : [response.data]); // Ensure data is always an array
       } catch (error) {

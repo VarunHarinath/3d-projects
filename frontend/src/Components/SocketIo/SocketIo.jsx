@@ -5,7 +5,7 @@ const SocketIo = () => {
   const [message, setMessage] = useState("");
   const [room, setRoom] = useState("");
   const [messages, setMessages] = useState([]);
-  const socket = io("http://localhost:3010"); // Corrected variable name
+  const socket = io("http://13.235.176.186:3010"); // Corrected variable name
 
   useEffect(() => {
     socket.on(

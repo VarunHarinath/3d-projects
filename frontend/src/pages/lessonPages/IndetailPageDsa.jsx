@@ -10,7 +10,7 @@ const IndetailPageDsa = () => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/lessonDsa/${id}`
+          `http://13.235.176.186:3000/lessonDsa/${id}`
         );
         setData(response.data);
       } catch (error) {

@@ -7,7 +7,9 @@ const AlgoPage = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/lessonAlgo");
+        const response = await axios.get(
+          "http://13.235.176.186:3000/lessonAlgo"
+        );
         setData(response.data);
         console.log(response.data);
       } catch (error) {

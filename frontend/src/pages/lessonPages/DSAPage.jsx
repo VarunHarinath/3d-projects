@@ -7,7 +7,9 @@ const DSAPage = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/lessonDsa");
+        const response = await axios.get(
+          "http://13.235.176.186:3000/lessonDsa"
+        );
         setData(response.data);
         console.log(response.data);
       } catch (error) {
