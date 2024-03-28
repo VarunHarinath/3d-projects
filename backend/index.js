@@ -29,7 +29,7 @@ mongoose
     console.log(error);
   });
 
-// web socket server
+// web socket serverx
 import { Server } from "socket.io";
 
 const io = new Server(3010);
