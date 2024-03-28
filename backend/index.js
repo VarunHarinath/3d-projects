@@ -30,10 +30,29 @@ mongoose
   });
 
 // web socket serverx
+
+import http from "http";
 import { Server } from "socket.io";
 
-const io = new Server(3010);
+const httpServer = http.createServer();
+
+const io = new Server(httpServer, {
+  cors: {
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
 
 io.on("connection", (socket) => {
   console.log(`Client connected: ${socket.id}`);
+  socket.on("send_msg", (data) => {
+    socket.emit("recive_msg", data);
+  });
+});
+
+// Listen on port 3010 using an ES6 arrow function
+const PORT = 3010;
+httpServer.listen(PORT, () => {
+  console.log(`Web Socket.io Server is running on port ${PORT}`);
 });

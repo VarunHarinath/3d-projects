@@ -1,15 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
 const SocketIo = () => {
   const [message, setMessage] = useState("");
   const [room, setRoom] = useState("");
   const [messages, setMessages] = useState([]);
+  const socket = io("http://localhost:3010"); // Corrected variable name
+
+  useEffect(() => {
+    socket.on(
+      "receive_msg",
+      (data) => {
+        // Corrected event name
+        setMessages((prevMessages) => [...prevMessages, data]);
+      },
+      socket
+    );
+
+    return () => {
+      socket.off("receive_msg"); // Proper cleanup
+    };
+  }, [socket]); // Added 'socket' to dependencies array to adhere to rules of hooks
 
   const handleSendMessage = () => {
     if (message.trim() !== "") {
-      setMessages([...messages, message]);
+      socket.emit("send_msg", { message, room }); // Assuming your backend expects an object with message and room
       setMessage("");
+    }
+  };
+
+  const handleJoinRoom = () => {
+    if (room.trim() !== "") {
+      socket.emit("join_room", room); // This line assumes your server has a 'join_room' event listener
     }
   };
 
@@ -54,7 +76,10 @@ const SocketIo = () => {
             onChange={(e) => setRoom(e.target.value)}
           />
         </div>
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        <button
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          onClick={handleJoinRoom}
+        >
           Join
         </button>
       </div>

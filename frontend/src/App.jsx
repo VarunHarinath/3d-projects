@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // Componenets Importing
 import Lessons from "./pages/Lessons.jsx";
 import "./App.css";
-import ModuleQuiz from "./components/ModulQuiz.jsx";
+import ModuleQuiz from "./components/ModuleQuiz.jsx";
 import QuizzList from "./pages/QuizzList.jsx";
 import Navbar from "./Components/Navbar";
 import Leaderboard from "./components/Leaderboard.jsx";
