@@ -30,6 +30,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/DSApage" element={<DSAPage />} />
           <Route path="/DSApage/:id" element={<IndetailPageDsa />} />
+          <Route path="/AlgoPage" element={<AlgoPage />} />
+          <Route path="/AlgoPage/:id" element={<IndetailPage />} />
+          <Route path="/chatrooms" element={<SocketIo />} />
         </Routes>
       </Router>
     </>
