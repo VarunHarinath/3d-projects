@@ -12,7 +12,7 @@ import DSAPage from "./pages/lessonPages/DSAPage.jsx";
 import AlgoPage from "./pages/lessonPages/AlgoPage.jsx";
 import IndetailPage from "./pages/lessonPages/IndetailPageAlgo.jsx";
 import IndetailPageDsa from "./pages/lessonPages/IndetailPageDsa.jsx";
-import SocketIo from "./components/SocketIo/SocketIo.jsx";
+import SocketIo from "./components/SocketIoC/SocketIo.jsx";
 function App() {
   return (
     <>
