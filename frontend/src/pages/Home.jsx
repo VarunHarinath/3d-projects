@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import Loader from "../Components/Loader";
+import Loader from "../Components/Loader.jsx";
 import { Island, Sky, Bird, Plane } from "../models/index.js";
 import HomeInfo from "./HomeInfo.jsx";
 
