@@ -7,12 +7,7 @@ import cors from "cors";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
-app.use(
-  cors({
-    origin: "https://smartedu-adqua3res-varunharinath.vercel.app", // Replace with your Vercel domain
-  })
-);
+
 
 app.use("/lessonDsa", lessonsRoute);
 app.use("/lessonAlgo", lessonAlgoRoute);
